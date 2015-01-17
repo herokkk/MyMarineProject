@@ -210,7 +210,8 @@ public class Pic_page extends Activity{
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-			   return;
+			   Intent intent=new Intent(Pic_page.this,Second_page.class);
+			   startActivity(intent);
 			}
 		});
 	}
