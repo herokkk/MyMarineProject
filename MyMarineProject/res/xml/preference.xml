@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory android:title="Marine information">
+
+    <EditTextPreference android:key="shipname"
+                        android:title="Ship name"
+                        android:summary="Please enter the ship name"
+                        android:dialogTitle="Ship name"
+                        android:defaultValue="null value"/>
+    
+    <EditTextPreference android:key="scientistname"
+                        android:title="Scientist name"
+                        android:summary="Please enter the your name"
+                        android:dialogTitle="Scientist name"
+                        />
+    
+    <EditTextPreference android:key="email"
+                        android:title="E-mail"
+                        android:summary="Please enter your emial address"
+                        android:dialogTitle="E-mail"
+                        />
+    
+    </PreferenceCategory>
+</PreferenceScreen>

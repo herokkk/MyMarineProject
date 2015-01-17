@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainpage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mymarineproject.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/camera"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <SurfaceView
+        android:id="@+id/camera"
+        android:layout_width="300dp"
+        android:layout_height="284dp"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:gravity="center_vertical">
+        <Button
+        android:id="@+id/press"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/shot" 
+        android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/More" 
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+    
+
+    <!--
+         <include
+        android:layout_height="wrap_content"
+        layout="@layout/tab"
+        android:paddingBottom="1dp" />
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="horizontal" 
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/add" 
+            android:layout_marginRight="20dp"
+            android:onClick="add_triggered"/>
+
+        <Button
+            android:id="@+id/delete"
+             android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/delete" 
+            android:layout_marginRight="20dp"
+            android:onClick="delete_triggered"/>
+
+        <Button
+            android:id="@+id/Prefer"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/Setting" 
+            android:onClick="setting_triggered"/>
+
+    </LinearLayout>
+
+</LinearLayout>

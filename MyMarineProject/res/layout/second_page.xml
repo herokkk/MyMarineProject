@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/buttonsShow"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.39"
+        android:gravity="center"
+        android:orientation="vertical" >
+        
+    </LinearLayout>
+    
+    <!-- This is used to show the button Back -->
+    <LinearLayout
+        android:id="@+id/backbutton"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:orientation="vertical" >
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
+        android:orientation="horizontal" 
+        android:paddingBottom="1dp">
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:text="@string/add" 
+            android:onClick="add_triggered"/>
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:text="@string/delete" 
+            android:onClick="delete_triggered"/>
+
+        <Button
+            android:id="@+id/Prefer"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/Setting" 
+            android:onClick="setting_triggered"/>
+    </LinearLayout>
+
+</LinearLayout>
