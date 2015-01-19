@@ -5,3 +5,7 @@ select the picture you have taken on the first page , after choosing that, when 
 selecting button, a new window will be popped up to ask if you want to save it to sd card,
 when you press save button, the information like GPS coordinates, time and picture will be save
 
+Git link:https://github.com/herokkk/MyMarineProject
+
+Username: herokkk
+Password: yearnhero151

@@ -4,7 +4,6 @@ package ie.gmit.computing;
 import ie.gmit.computing.model.Node;
 import ie.gmit.computing.model.TreeStructure;
 import ie.gmit.computing.preference.MyDialogPrefrence;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -15,9 +14,7 @@ import java.io.ObjectOutputStream;
 import java.io.StreamCorruptedException;
 import java.util.Iterator;
 import java.util.Map;
-
 import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
-
 import android.R.integer;
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -29,8 +26,6 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.PixelFormat;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.hardware.Camera;
 import android.hardware.Camera.PictureCallback;
 import android.os.Bundle;
@@ -75,8 +70,6 @@ public static int i=1;
 
 ObjectInputStream inputStream;
 ObjectOutputStream outputStream;
-
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -108,10 +101,7 @@ ObjectOutputStream outputStream;
         moreButtons=(Button)findViewById(R.id.more);
         moreButtons.setId(1);
         moreButtons.setOnClickListener(this);
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
-        }
+        
         surfaceView=(SurfaceView)findViewById(R.id.camera);
         surfaceView.setFocusable(true);
         surfaceView.setFocusable(true);
@@ -127,18 +117,13 @@ ObjectOutputStream outputStream;
 		
 	}
 
-	@SuppressLint("NewApi")
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-	    if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-	        Bundle extras = data.getExtras();
-	        Bitmap imageBitmap = (Bitmap) extras.get("data");
-	        
-	       Drawable drawable=  new BitmapDrawable(imageBitmap);
-	       surfaceView.setBackground(drawable);
-	    }
-	}
-
+	
+//	private void dispatchTakePictureIntent() {
+//	    Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//	    if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+//	        startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+//	    }
+//	}
 	
 	@Override
 	public void surfaceCreated(SurfaceHolder holder) {
@@ -162,7 +147,7 @@ ObjectOutputStream outputStream;
 //			  }
 //		  }
 		  
-		//ï¿½ï¿½ï¿½ï¿½2 ï¿½Ä±ï¿½SurfaceViewï¿½Ä´ï¿½Ð¡
+		//²Ù×÷2 ¸Ä±äSurfaceViewµÄ´óÐ¡
 			java.util.List<Camera.Size> previewSizes=parameters.getSupportedPreviewSizes();
 			if (previewSizes.size()>1) {
 				Iterator<Camera.Size> iterator2=previewSizes.iterator();
@@ -211,7 +196,6 @@ ObjectOutputStream outputStream;
 		// TODO Auto-generated method stub
 		camera.stopPreview();
 		camera.release();
-		camera=null;
 	}
 
 
